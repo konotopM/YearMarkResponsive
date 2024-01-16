@@ -25,6 +25,15 @@
   font-weight: 400;
 }
 
+.statistics__chart-info {
+  margin-top: 32px;
+}
+
+.filter-form__filter-btn {
+  width: 100%;
+  padding: 8px 16px;
+}
+
 @media screen and (min-width: 784px) {
   .chart-info-item {
     flex-direction: row;
@@ -37,7 +46,6 @@
 
   .statistics__chart-info {
     display: flex;
-    justify-content: stretch;
     align-items: center;
     gap: 24px;
   }
