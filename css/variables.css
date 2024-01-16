@@ -1,0 +1,15 @@
+:root {
+  --main-font: "Roboto Condensed", sans-serif;
+  --accent-font: "Oswald", sans-serif;
+
+  /* main colors */
+  --black: #121417;
+  --accent: #6affa5;
+  --light-accent: #b5ffd3;
+  --light-accent-2: #e1ffed;
+  --dark-accent: #46b472;
+  --dark-accent-2: #2b7c4b;
+  --white: #ffffff;
+
+  --transition-duration-time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

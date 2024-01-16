@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оцінки - YourMark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto+Condensed:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles-index.css" />
+  </head>
+  <body>
+    <nav class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="./index.html">YourMark</a>
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a class="header__list-link active" href="./index.html">Оцінки</a>
+          </li>
+          <li class="header__list-item">
+            <a class="header__list-link" href="./statistics.html">
+              Статистика
+            </a>
+          </li>
+        </ul>
+        <button class="header__menu-btn js-open-menu" type="button">
+          <svg class="header__menu-icon" width="20px" height="20px">
+            <use href="./img/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <section class="container marks">
+      <h1 class="marks__title">Мої оцінки</h1>
+
+      <form class="filter-form" id="filter-form">
+        <div class="filter-form__select-wraper">
+          <label for="filter-subject"> Оберіть предмет:</label>
+          <select
+            class="filter-form__select input"
+            name="filter-subject"
+            id="filter-subject"
+            multiselect-max-items="1"
+            multiselect-hide-x="true"
+          >
+            <option selected value="1" disabled></option>
+            <option value="2">Математика</option>
+            <option value="3">Географія</option>
+            <option value="4">Інформатика</option>
+          </select>
+        </div>
+
+        <div class="filter-form__input-wrapper">
+          <label for="date-from"> Дата з:</label>
+          <input class="filter-form__input input" type="date" id="date-from" />
+        </div>
+        <div class="filter-form__input-wrapper">
+          <label for="date-to"> Дата до: </label>
+          <input class="filter-form__input input" type="date" id="date-to" />
+        </div>
+
+        <button class="marks__filter-btn btn js-filter-submit" type="button">
+          Фільтрувати
+        </button>
+      </form>
+
+      <table class="marks__table">
+        <tr>
+          <th class="sticky">Рік</th>
+          <th colspan="16">2023</th>
+          <th colspan="5">2024</th>
+        </tr>
+        <tr>
+          <th class="sticky">Дата</th>
+          <th>
+            <span class="d">01</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">05</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">06</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">07</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">11</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">12</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">14</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">18</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">19</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">20</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">22</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">25</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">26</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">27</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">28</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">29</span>
+            <br />
+            <span>12</span>
+          </th>
+          <th>
+            <span class="d">15</span>
+            <br />
+            <span>01</span>
+          </th>
+          <th>
+            <span class="d">16</span>
+            <br />
+            <span>01</span>
+          </th>
+          <th>
+            <span class="d">17</span>
+            <br />
+            <span>01</span>
+          </th>
+          <th>
+            <span class="d">18</span>
+            <br />
+            <span>01</span>
+          </th>
+          <th>
+            <span class="d">23</span>
+            <br />
+            <span>01</span>
+          </th>
+        </tr>
+        <tr>
+          <th class="sticky">Математика</th>
+          <td>10</td>
+          <td></td>
+          <td></td>
+          <td>9</td>
+          <td></td>
+          <td></td>
+          <td>10</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>11</td>
+          <td></td>
+          <td>10</td>
+          <td>8</td>
+          <td>11</td>
+          <td>10</td>
+          <td></td>
+          <td>9</td>
+          <td></td>
+          <td>8</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th class="sticky">Географія</th>
+          <td>11</td>
+          <td></td>
+          <td>11</td>
+          <td></td>
+          <td>10</td>
+          <td></td>
+          <td></td>
+          <td>8</td>
+          <td>11</td>
+          <td>10</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>8</td>
+          <td></td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th class="sticky">Інформатика</th>
+          <td></td>
+          <td>10</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>12</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>9</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>11</td>
+          <td>11</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="add-mark container">
+      <h2 class="add-mark__title">Додати оцінки</h2>
+      <ul class="added-marks">
+        <li class="added-marks-item">
+          <div class="">
+            <span>Предмет: </span>
+            <span class="value">Інформатика </span>
+          </div>
+          <div>
+            <span>Дата: </span>
+            <span class="value">15.01.2024 </span>
+          </div>
+          <div>
+            <span>Оцінка: </span>
+            <span class="value">11 </span>
+          </div>
+        </li>
+        <li class="added-marks-item">
+          <div class="">
+            <span>Предмет: </span>
+            <span class="value">Математика </span>
+          </div>
+          <div>
+            <span>Дата: </span>
+            <span class="value">20.12.2023 </span>
+          </div>
+          <div>
+            <span>Оцінка: </span>
+            <span class="value">10 </span>
+          </div>
+        </li>
+      </ul>
+
+      <form class="add-mark__form" id="add-mark__form">
+        <div class="add-mark__input-wrapper visually-hidden">
+          <label for="new-subject">Оберіть предмет</label>
+          <select class="input" name="subject" id="subject"></select>
+        </div>
+
+        <div class="add-mark__input-wrapper subject">
+          <label for="new-subject">Запишіть назву предмету</label>
+          <input class="input" type="text" id="new-subject" />
+        </div>
+
+        <div class="add-mark__input-wrapper">
+          <label for="new-date">Оберіть дату</label>
+          <input class="input" type="date" id="new-date" />
+        </div>
+
+        <div class="add-mark__input-wrapper">
+          <label for="mark">Запишіть оцінку</label>
+          <input class="input" type="text" id="mark" pattern="^[1-9]|1[0-2]$" />
+        </div>
+        <button class="add-mark__submit btn" type="submit">Додати</button>
+      </form>
+    </section>
+
+    <div class="mobile-menu__backdrop js-menu-container" id="mobile-menu">
+      <div class="mobile-menu__container container">
+        <button class="mobile-menu__close-btn js-close-menu" type="button">
+          <svg
+            class="mobile-menu__close-icon"
+            aria-label="mobile menu close button"
+            width="8"
+            height="8"
+          >
+            <use href="./img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__list-item">
+            <a class="mobile-menu__list-link active" href="./index.html"
+              >Оцінки</a
+            >
+          </li>
+          <li class="mobile-menu__list-item">
+            <a class="mobile-menu__list-link" href="./statistics.html">
+              Статистика
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

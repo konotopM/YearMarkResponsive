@@ -1,0 +1,10 @@
+@import url("./reset.css");
+@import url("./variables.css");
+@import url("./common.css");
+@import url("./container.css");
+
+@import url("./header.css");
+@import url("./marks.css");
+@import url("./filter-form.css");
+@import url("./mobile-menu.css");
+@import url("./add-mark-form.css");

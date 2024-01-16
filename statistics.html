@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Статистика - YourMark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Roboto+Condensed:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles-statistics.css" />
+  </head>
+  <body>
+    <nav class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="./index.html">YourMark</a>
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a class="header__list-link" href="./index.html">Оцінки</a>
+          </li>
+          <li class="header__list-item">
+            <a class="header__list-link active" href="./statistics.html">
+              Статистика
+            </a>
+          </li>
+        </ul>
+        <button class="header__menu-btn js-open-menu" type="button">
+          <svg class="header__menu-icon" width="20px" height="20px">
+            <use href="./img/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <section class="container statistics">
+      <h1 class="statistics__title">Статистика</h1>
+
+      <form class="filter-form" id="filter-form">
+        <div class="filter-form__select-wraper">
+          <label for="filter-subject"> Оберіть предмет:</label>
+          <select
+            class="filter-form__select input"
+            name="filter-subject"
+            id="filter-subject"
+            multiselect-max-items="1"
+            multiselect-hide-x="true"
+          >
+            <option selected value="1" disabled></option>
+            <option value="2">Математика</option>
+            <option value="3">Географія</option>
+            <option value="4">Інформатика</option>
+          </select>
+        </div>
+
+        <div class="filter-form__input-wrapper">
+          <label for="date-from"> Дата з:</label>
+          <input class="filter-form__input input" type="date" id="date-from" />
+        </div>
+        <div class="filter-form__input-wrapper">
+          <label for="date-to"> Дата до: </label>
+          <input class="filter-form__input input" type="date" id="date-to" />
+        </div>
+
+        <button class="marks__filter-btn btn js-filter-submit" type="button">
+          Фільтрувати
+        </button>
+      </form>
+
+      <div class="statistics__chart-info">
+        <canvas class="chart" id="myChart"></canvas>
+        <div class="chart-info">
+          <ul>
+            <li class="chart-info-item">
+              <div class="">
+                <span>Максимальна оцінка: </span>
+                <span class="value">12 </span>
+              </div>
+              <div>
+                <span>Дата: </span>
+                <span class="value">28.12.2023 </span>
+              </div>
+              <div>
+                <span>Предмет: </span>
+                <span class="value">Інформатика </span>
+              </div>
+            </li>
+            <li class="chart-info-item">
+              <div class="">
+                <span>Мінімальна оцінка: </span>
+                <span class="value">12 </span>
+              </div>
+              <div>
+                <span>Дата: </span>
+                <span class="value">28.12.2023 </span>
+              </div>
+              <div>
+                <span>Предмет: </span>
+                <span class="value">Інформатика </span>
+              </div>
+            </li>
+            <li class="chart-info-item">
+              <div class="">
+                <span>Середня оцінка: </span>
+                <span class="value">12 </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="mobile-menu__backdrop js-menu-container" id="mobile-menu">
+      <div class="mobile-menu__container container">
+        <button class="mobile-menu__close-btn js-close-menu" type="button">
+          <svg
+            class="mobile-menu__close-icon"
+            aria-label="mobile menu close button"
+            width="8"
+            height="8"
+          >
+            <use href="./img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__list-item">
+            <a class="mobile-menu__list-link" href="./index.html">Оцінки</a>
+          </li>
+          <li class="mobile-menu__list-item">
+            <a class="mobile-menu__list-link active" href="./statistics.html">
+              Статистика
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="module" src="./js/statistics.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"
+      integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

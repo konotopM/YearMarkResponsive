@@ -1,0 +1,52 @@
+.marks__title {
+  margin-top: 40px;
+  font-size: 32px;
+  font-family: var(--accent-font);
+  text-align: center;
+}
+
+.marks__btns {
+  margin-top: 32px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.marks__filter-btn {
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.marks__table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 32px;
+}
+
+.d {
+  border-bottom: 1px solid var(--black);
+}
+
+.sticky {
+  position: sticky;
+  left: 0px;
+  background-color: var(--white);
+}
+
+th,
+td {
+  border: 1px solid var(--accent);
+  border-collapse: collapse;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+td {
+  text-align: center;
+}
+
+th {
+  font-family: inherit;
+  font-weight: 500;
+}

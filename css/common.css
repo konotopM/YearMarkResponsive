@@ -1,0 +1,76 @@
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--light-accent);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 16px;
+  background-color: var(--white);
+  color: var(--black);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn {
+  background-color: var(--light-accent);
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  transition: background-color var(--transition-duration-time-function);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent);
+}
+
+.input {
+  background-color: var(--white);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 6px 12px;
+  border: 1px solid var(--accent);
+}
+
+.input:focus {
+  outline-color: var(--dark-accent);
+}
